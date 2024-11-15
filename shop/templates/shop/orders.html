@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+{% block title %}заказы{% endblock %}
+{% block content %}
+    {% for order in orders %}
+<div class="order text-light">
+    <h1>ваш заказ</h1>
+    <img src="{{order.product.image.url}}" class="card-img-top w-25" alt="...">
+    <div class="d-flex flex-row gap-1">
+        <h2 class="card-price">много денег &#8381;</h2>
+    </div>
+    <div>
+        <p>{{order.product.title}}</p>
+    </div>
+    <div>
+        <p> куда доставлять-{{order.address}}</p>
+    </div>
+    <div>
+        <p>ваш номер-{{order.phone}}</p>
+    </div>
+    <div>
+        <p>время в которое доставим-{{order.koment}}</p>
+    </div>
+    <div>
+        <p> кол-во-{{order.count}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

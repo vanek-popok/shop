@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% block title %}заказы{% endblock %}
+{% block content %}
+    <div class="">
+        <div>
+            <h3>заказ</h3>
+        </div>
+        <div>
+            <form class="d-flex flex-column w-25"  action="" method="post">
+                {% csrf_token %}
+                <input type="text" placeholder="напишите паже свой адрес" name="address">
+                <input type="email" placeholder="напишите паже свой емаил" name="email">
+                <input type="phone" placeholder="напишите паже свой пхон" name="phone">
+                <input type="text" placeholder="напишите паже свой комент к заказу" name="koment">
+                <input walye="1" type="number" placeholder="напишите паже кол-во " name="count">
+
+
+                <button type="submit">потверждение к покупке</button>
+            </form>
+            
+        </div>
+    </div>
+    {% endblock %}
